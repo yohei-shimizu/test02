@@ -22,6 +22,23 @@
       <a-entity camera></a-entity>
     </a-scene>
 
+    <a-scene embedded arjs vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;">
+	    
+      <!-- 3DCGモデルを読み込む -->
+      <a-assets>
+        <a-asset-item id="tiger" src="./assets/asset.glb"></a-asset-item>
+      </a-assets>
+
+      <!-- マーカーの.pattファイルを読み込む -->
+      <a-marker type="pattern" url="./assets/marker.patt">
+        <!-- 3Dモデルを呼び出す -->
+        <a-entity gltf-model="#tiger"></a-entity>
+      </a-marker>
+
+      <!-- カメラを追加 -->
+      <a-entity camera></a-entity>
+    </a-scene>
+
     <div style="position: fixed; bottom: 150px;">
       <button type="button" id="b1">配合量を増やす</button>
       <button type="button" id="b2">配合量を減らす</button>
