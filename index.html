@@ -19,17 +19,6 @@
         <a-box src="./img/yet.jpg" position='0 0.5 0' id="res"></a-box>
       </a-marker>
 
-            <!-- 3DCGモデルを読み込む -->
-            <a-assets>
-              <a-asset-item id="tiger" src="./assets/asset.glb"></a-asset-item>
-            </a-assets>
-      
-            <!-- マーカーの.pattファイルを読み込む -->
-            <a-marker type="pattern" url="./assets/marker.patt">
-              <!-- 3Dモデルを呼び出す -->
-              <a-entity gltf-model="#tiger"></a-entity>
-            </a-marker>
-
       <a-entity camera></a-entity>
     </a-scene>
 
